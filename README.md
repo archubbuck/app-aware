@@ -1,22 +1,16 @@
-# ChatSEO - AI-Powered SEO Assistant
+# AI Chat - Modern Chat Interface
 
-A modern, responsive clone of [ChatSEO](https://chatseo.app/) built with Angular 20, following best practices and featuring a clean, intuitive chat interface.
+A modern, responsive chat interface built with Angular 20, following best practices and featuring a clean, intuitive design. This is a use-case agnostic chat shell that can be adapted for various applications.
 
 ## Features
 
-- 🤖 AI-powered SEO assistant chatbot
-- 💬 Real-time chat interface with message history
+- 🤖 AI-powered chat interface
+- 💬 Real-time chat with message history
 - 🎨 Modern, responsive design with smooth animations
 - 🔄 Clear conversation functionality
 - ⌨️ Keyboard shortcuts (Enter to send)
 - 📱 Mobile-friendly responsive layout
-- 🎯 SEO-focused conversation topics including:
-  - Keyword research
-  - Content optimization
-  - Technical SEO
-  - Link building
-  - Meta descriptions and title tags
-  - And more!
+- 🎯 Extensible architecture for custom use cases
 
 ## Technology Stack
 
@@ -87,7 +81,7 @@ src/
 │   ├── models/
 │   │   └── message.model.ts  # Message interface
 │   ├── services/
-│   │   └── chat.ts        # Chat service with SEO responses
+│   │   └── chat.ts        # Chat service for message management
 │   ├── app.ts             # Root component
 │   └── app.config.ts      # App configuration
 ├── styles.scss            # Global styles
@@ -102,17 +96,6 @@ src/
 - Timestamp display for all messages
 - Auto-scroll to latest message
 - Smooth animations for message appearance
-
-### SEO Knowledge Base
-The assistant can help with topics including:
-- Keyword research strategies
-- SEO best practices
-- Meta descriptions optimization
-- Title tag best practices
-- Technical SEO improvements
-- Content optimization
-- Link building strategies
-- And more!
 
 ### Responsive Design
 - Optimized for desktop and mobile devices
@@ -132,12 +115,14 @@ The assistant can help with topics including:
 - ✅ Accessibility considerations
 - ✅ SEO-friendly meta tags
 
-## Screenshots
+## Customization
 
-![ChatSEO Initial View](https://github.com/user-attachments/assets/7b88cd0a-1b62-4771-a836-36f068bb806d)
+This is a generic chat shell that can be customized for various use cases:
 
-![ChatSEO Conversation](https://github.com/user-attachments/assets/8728bb9c-f84a-46c9-a3b7-8803dae00462)
+1. **Update the Chat Service** (`src/app/services/chat.ts`) - Modify the `generateResponse()` method to implement your custom logic
+2. **Customize Branding** - Update colors, fonts, and styles in the SCSS files
+3. **Add Features** - Extend the component functionality as needed for your use case
 
 ## License
 
-This project is a demonstration/clone and is not affiliated with the original ChatSEO application.
+This project is open source and available for adaptation to various use cases.

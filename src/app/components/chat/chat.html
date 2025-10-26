@@ -4,7 +4,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
       </svg>
-      <h1>ChatSEO</h1>
+      <h1>AI Chat</h1>
     </div>
     <button class="clear-button" (click)="clearChat()" title="Clear conversation">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -27,7 +27,7 @@
         class="chat-input"
         [(ngModel)]="userInput"
         (keypress)="handleKeyPress($event)"
-        placeholder="Ask me anything about SEO..."
+        placeholder="Type your message here..."
         rows="1"
       ></textarea>
       <button
@@ -43,7 +43,7 @@
       </button>
     </div>
     <div class="input-hint">
-      Try asking: "How do I improve my keyword research?" or "What are best practices for meta descriptions?"
+      Press Enter to send your message
     </div>
   </div>
 </div>
