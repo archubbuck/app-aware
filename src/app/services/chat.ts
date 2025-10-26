@@ -54,9 +54,14 @@ export class Chat {
   private generateResponse(userMessage: string): string {
     const lowerMessage = userMessage.toLowerCase();
     
-    for (const [key, response] of Object.entries(this.seoResponses)) {
+    // Sort keywords by length (longest first) to match more specific terms first
+    const sortedKeywords = Object.keys(this.seoResponses)
+      .filter(key => key !== 'default')
+      .sort((a, b) => b.length - a.length);
+    
+    for (const key of sortedKeywords) {
       if (lowerMessage.includes(key)) {
-        return response;
+        return this.seoResponses[key];
       }
     }
     

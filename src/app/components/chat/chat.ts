@@ -55,6 +55,8 @@ export class Chat implements AfterViewChecked {
         this.messagesContainer.nativeElement.scrollTop = 
           this.messagesContainer.nativeElement.scrollHeight;
       }
-    } catch(err) { }
+    } catch(err) { 
+      // Silently ignore scroll errors that may occur during view initialization
+    }
   }
 }
