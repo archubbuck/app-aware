@@ -1,0 +1,151 @@
+<div class="landing-container">
+  <!-- Header -->
+  <header class="landing-header">
+    <div class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      </svg>
+      <h1>AI Chat</h1>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h2 class="hero-title">Your AI-Powered Assistant</h2>
+      <p class="hero-subtitle">Experience intelligent conversations with our modern chat interface. Get instant responses and seamless interactions.</p>
+    </div>
+  </section>
+
+  <!-- Preview Section -->
+  <section class="preview-section">
+    <div class="preview-container">
+      <div class="preview-image">
+        <div class="chat-preview">
+          <div class="preview-header">
+            <div class="preview-title">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+              <span>AI Chat</span>
+            </div>
+          </div>
+          <div class="preview-messages">
+            <div class="preview-message assistant">
+              <div class="message-avatar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z"/>
+                </svg>
+              </div>
+              <div class="message-content">
+                <div class="message-sender">AI Assistant</div>
+                <div class="message-text">Hello! I'm your AI assistant. How can I help you today?</div>
+              </div>
+            </div>
+            <div class="preview-message user">
+              <div class="message-avatar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+                  <circle cx="12" cy="7" r="4"/>
+                </svg>
+              </div>
+              <div class="message-content">
+                <div class="message-sender">You</div>
+                <div class="message-text">Tell me about this chat interface</div>
+              </div>
+            </div>
+            <div class="preview-message assistant">
+              <div class="message-avatar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z"/>
+                </svg>
+              </div>
+              <div class="message-content">
+                <div class="message-sender">AI Assistant</div>
+                <div class="message-text">This is a modern, responsive chat interface built with Angular 20. It features real-time messaging, smooth animations, and an intuitive design that works seamlessly across all devices.</div>
+              </div>
+            </div>
+          </div>
+          <div class="preview-input">
+            <input type="text" placeholder="Type your message here..." readonly />
+            <button class="preview-send-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"/>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Waitlist Section -->
+  <section class="waitlist-section">
+    <div class="waitlist-container">
+      @if (!isSubmitted()) {
+        <h3 class="waitlist-title">Join the Waitlist</h3>
+        <p class="waitlist-subtitle">Be the first to experience our AI-powered chat interface. Sign up for early access.</p>
+        <form class="waitlist-form" (submit)="onSubmit(); $event.preventDefault()">
+          <div class="form-group">
+            <input 
+              type="email" 
+              class="email-input"
+              [(ngModel)]="email"
+              name="email"
+              placeholder="Enter your email address"
+              required
+            />
+            <button type="submit" class="submit-button">
+              Join Waitlist
+            </button>
+          </div>
+        </form>
+      } @else {
+        <div class="success-message">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+          <h3>Thank you for joining!</h3>
+          <p>We'll notify you when we launch.</p>
+        </div>
+      }
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <h3 class="features-title">Key Features</h3>
+    <div class="features-grid">
+      <div class="feature-card">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+        </svg>
+        <h4>Real-time Responses</h4>
+        <p>Get instant AI-powered responses to your questions with minimal latency.</p>
+      </div>
+      <div class="feature-card">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+          <line x1="8" y1="21" x2="16" y2="21"/>
+          <line x1="12" y1="17" x2="12" y2="21"/>
+        </svg>
+        <h4>Responsive Design</h4>
+        <p>Beautiful interface that works seamlessly on desktop, tablet, and mobile devices.</p>
+      </div>
+      <div class="feature-card">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        <h4>Secure & Private</h4>
+        <p>Your conversations are protected with enterprise-grade security.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="landing-footer">
+    <p>&copy; 2025 AI Chat. All rights reserved.</p>
+  </footer>
+</div>

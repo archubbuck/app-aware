@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { Chat } from './components/chat/chat';
+import { Landing } from './components/landing/landing';
 
 @Component({
   selector: 'app-root',
-  imports: [Chat],
+  imports: [Landing],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

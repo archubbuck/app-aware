@@ -1,16 +1,15 @@
-# AI Chat - Modern Chat Interface
+# AI Chat - Landing Page
 
-A modern, responsive chat interface built with Angular 20, following best practices and featuring a clean, intuitive design. This is a use-case agnostic chat shell that can be adapted for various applications.
+A modern, single-page application with an identical layout to ChatSEO, built with Angular 20. Features a hero section, chat preview, waitlist form, and key features showcase.
 
 ## Features
 
-- 🤖 AI-powered chat interface
-- 💬 Real-time chat with message history
-- 🎨 Modern, responsive design with smooth animations
-- 🔄 Clear conversation functionality
-- ⌨️ Keyboard shortcuts (Enter to send)
-- 📱 Mobile-friendly responsive layout
-- 🎯 Extensible architecture for custom use cases
+- 🎨 Beautiful landing page with gradient hero section
+- 💬 Interactive chat preview showing the interface
+- 📧 Waitlist form with email validation
+- ✨ Key features showcase section
+- 📱 Fully responsive design
+- 🎯 Single-page application layout
 
 ## Technology Stack
 
@@ -76,7 +75,8 @@ npm test -- --no-watch --browsers=ChromeHeadless
 src/
 ├── app/
 │   ├── components/
-│   │   ├── chat/          # Main chat container component
+│   │   ├── landing/       # Main landing page component
+│   │   ├── chat/          # Chat interface component
 │   │   └── message/       # Individual message component
 │   ├── models/
 │   │   └── message.model.ts  # Message interface
@@ -88,19 +88,35 @@ src/
 └── index.html             # HTML entry point
 ```
 
-## Features Overview
+## Landing Page Sections
 
-### Chat Interface
-- Clean, modern UI with gradient header
-- Distinct styling for user and assistant messages
-- Timestamp display for all messages
-- Auto-scroll to latest message
-- Smooth animations for message appearance
+### Hero Section
+- Eye-catching gradient background
+- Clear value proposition
+- Engaging headline and subtitle
 
-### Responsive Design
-- Optimized for desktop and mobile devices
-- Flexible layout that adapts to screen size
-- Touch-friendly interface
+### Preview Section
+- Interactive chat interface preview
+- Sample conversation showing the interface
+- Demonstrates key features visually
+
+### Waitlist Section
+- Email signup form
+- Form validation
+- Success message after submission
+- Purple gradient background matching ChatSEO
+
+### Features Section
+- Three key feature cards:
+  - Real-time Responses
+  - Responsive Design
+  - Secure & Private
+- Icon-based presentation
+- Hover animations
+
+### Footer
+- Copyright information
+- Clean, minimalist design
 
 ## Best Practices Implemented
 
@@ -114,14 +130,16 @@ src/
 - ✅ Semantic HTML structure
 - ✅ Accessibility considerations
 - ✅ SEO-friendly meta tags
+- ✅ Responsive design for all devices
 
 ## Customization
 
-This is a generic chat shell that can be customized for various use cases:
+This is a generic landing page shell that can be customized:
 
-1. **Update the Chat Service** (`src/app/services/chat.ts`) - Modify the `generateResponse()` method to implement your custom logic
-2. **Customize Branding** - Update colors, fonts, and styles in the SCSS files
-3. **Add Features** - Extend the component functionality as needed for your use case
+1. **Update Branding** - Modify colors, fonts, and styles in SCSS files
+2. **Change Content** - Edit the landing component HTML for different messaging
+3. **Add Features** - Extend the component functionality as needed
+4. **Integrate Backend** - Connect the waitlist form to your backend API
 
 ## License
 
